@@ -1,0 +1,136 @@
+.container {
+    display: grid;
+    position: relative;
+    gap: 3vw;
+    padding: 3vw 0;
+    background: #2d3436;
+}
+
+/* TABLE */
+.table {
+    display: grid;
+    grid-template-columns: repeat(5, 15vw);
+    grid-template-rows: repeat(8, 6vw);
+    grid-template-areas: 
+        "p1 c1 st c2 p2"
+        "p1 a1 cp a2 p2"
+        "d1 .  po .  d2"
+        ".  bo bo bo ."
+        ".  bo bo bo ."
+        ".  d3 a3 .  ."
+        ".  .  p3 c3 ."
+        ".  .  p3 .  .";
+    box-shadow: inset 0 0 3vw 1vw rgba(0, 0, 0, 0.75), 0 0 4vw 0vw rgba(0, 0, 0, 0.5);
+    border: 2.5vw solid rgba(100, 0, 0, 0.25);
+    border-radius: 35vw;
+    place-self: end center;
+    background-image: 
+        radial-gradient(ellipse at center, transparent, rgba(0, 0, 0, 0.5) 45vw, rgba(0, 0, 0, 1)),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, transparent 50%, rgba(0, 0, 0, 0.25) 100%), 
+        linear-gradient(to right, rgba(0, 0, 0, 0.25) 0%, transparent 50%, rgba(0, 0, 0, 0.25) 100%);
+    background-color: #218c74;
+}
+
+.street-name {
+    grid-area: st;
+    place-self: end center;
+    font-size: 2vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* CONTROLS */
+.controls {
+    place-self: start center;
+    width: 80vw;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1vw;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+    box-shadow: 0 1vw 3vw 0 rgba(0, 0, 0, 0.5);
+}
+
+.steps {
+    display: flex;
+    flex-direction: row;
+    padding: 1vw;
+}
+
+.step {
+    height: 0.8vw;
+    cursor: pointer;
+    border: 0.1vw solid #1e272e;
+    transition: all 0.2s ease-out;
+}
+
+.action {
+    flex: 1;
+    composes: step;
+    background: #84817a;
+    box-shadow: inset 0 0 0.4vw 0vw rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease-out;
+}
+
+.action:hover {
+    box-shadow: inset 0 0 0.4vw 0vw rgba(255, 255, 255, 0.2);
+}
+
+.action-active {
+    composes: action;
+    background: #d1ccc0;
+}
+
+.street {
+    composes: step;
+    position: relative;
+    border-radius: 0.2vw;
+    width: 0.8vw;
+    transform: scale(1.4) rotate(45deg);
+    background: #aaa69d;
+}
+
+.street:hover {
+    box-shadow: inset 0 0 0.5vw 0vw rgba(255, 255, 255, 0.5);
+}
+
+.street-active {
+    composes: street;
+    background: #f7f1e3;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    color: #808e9b;
+    padding: 2vw;
+    font-size: 1.25vw;
+    transition: color 0.2s ease-out;
+}
+
+.button:hover {
+    color: #d2dae2;
+}
+
+.button-disabled {
+    composes: button;
+    color: rgba(255, 255, 255, 0.1);
+    cursor: no-drop;
+}
+
+.button-disabled:hover {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.button-active {
+    composes: button;
+    color: #cd6133;
+}
+
+.button-active:hover {
+    color: #ff793f;
+}

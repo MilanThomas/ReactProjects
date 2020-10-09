@@ -1,0 +1,10 @@
+.amount {
+    font-size: 2vw;
+    font-weight: 900;
+    color: white;
+    place-self: center center;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0.1vw 0.3vw rgba(0, 0, 0, 1);
+    margin-top: 0.5vw;
+}

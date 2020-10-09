@@ -1,0 +1,75 @@
+.dealer {
+    display: flex;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-image: radial-gradient(ellipse at center, #ffda79,  #cc8e35);
+    border-radius: 50%;
+    font-size: 1.5vw;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 900;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.2vw 0vw 0 rgba(0, 0, 0, 0.25), inset 0 0.5vw 1vw 0 rgba(255, 255, 255, 0.75);
+}
+
+.dealer-1 {
+    composes: dealer;
+    grid-area: d1;
+    place-self: center end;
+}
+
+.dealer-2 {
+    composes: dealer;
+    grid-area: d2;
+    place-self: center start;
+}
+
+.dealer-3 {
+    composes: dealer;
+    grid-area: d3;
+    place-self: center end;
+}
+
+.allin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-self: center center;
+}
+
+.allin:before {
+    content: '▲';
+    font-size: 4vw;
+    color: #ff5252;
+    transform: scaleX(1.1);
+    text-shadow: 0 0.2vw 0.1vw rgba(0, 0, 0, 0.5);
+}
+
+.allin:after {
+    content: 'ALL IN';
+    position: relative;
+    width: 2vw;
+    line-height: 1.1;
+    text-align: center;
+    margin-top: -2.75vw;
+    font-size: 0.8vw;
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 900;
+}
+
+.allin-1 {
+    composes: allin;
+    grid-area: c1;
+}
+
+.allin-2 {
+    composes: allin;
+    grid-area: c2;
+}
+
+.allin-3 {
+    composes: allin;
+    grid-area: c3;
+}

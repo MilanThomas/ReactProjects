@@ -1,0 +1,22 @@
+# ignore node dependency directories
+node_modules/
+.expo/*
+npm-debug.*
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Node
+*.log
+.nvm
+
+# OS X
+.DS_Store
+
+# Config
+config/
+
+# VSCode
+.vscode/

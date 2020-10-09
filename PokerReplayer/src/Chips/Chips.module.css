@@ -1,0 +1,77 @@
+@value chip-green:  #218c74;
+@value chip-blue:   #34ace0;
+@value chip-purple: #474787;
+@value chip-orange: #ff793f;
+@value chip-red:    #b33939;
+
+.chips {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    place-self: end center;
+    margin-bottom: 0.5vw;
+}
+
+.chip-stack {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0 0.1vw;
+}
+
+.chip {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #f7f1e3;
+    width: 2vw;
+    height: 1.4vw;
+    box-shadow: 0vw 0.2vw 0vw 0vw rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    font-size: 0.7vw;
+    font-weight: 900;
+    margin-top: -1.8vw;
+}
+
+.chip:first-child {
+    box-shadow: 0vw 0.1vw 0vw 0vw rgba(0, 0, 0, 0.4);
+}
+
+.chip-25 {
+    composes: chip;
+    color: chip-green;
+    background: cornsilk;
+    border: 0.3vw dashed chip-green;
+}
+
+.chip-100 {
+    composes: chip;
+    color: chip-blue;
+    background: cornsilk;
+    border: 0.3vw dashed chip-blue;
+}
+
+.chip-500 {
+    composes: chip;
+    color: chip-purple;
+    background: cornsilk;
+    border: 0.3vw dashed chip-purple;
+}
+
+.chip-1000 {
+    composes: chip;
+    color: chip-orange;
+    background: cornsilk;
+    border: 0.3vw dashed chip-orange;
+}
+
+.chip-5000 {
+    composes: chip;
+    color: chip-red;
+    background: cornsilk;
+    border: 0.3vw dashed chip-red;
+}
